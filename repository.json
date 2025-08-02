@@ -1,0 +1,5 @@
+{
+  "name": "dnsmasq provides a container image for running DHCP, proxy DHCP, DNS, and/or TFTP with dnsmasq.",
+  "url": "https://gitlab.com/itsdonewhenitsdone/home-assistant-dnsmasq",
+  "maintainer": "Sascha Marcel Schmidt <mail@saschaschmidt.net>"
+}
