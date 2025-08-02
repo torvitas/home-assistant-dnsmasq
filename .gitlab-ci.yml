@@ -1,13 +1,43 @@
+workflow:
+  rules:
+    # Run on scheduled pipelines
+    - if: $CI_PIPELINE_SOURCE == "schedule"
+    # Run if triggered via the "Run pipeline" button in the GitLab UI
+    - if: $CI_PIPELINE_SOURCE == "web"
+    # Run on merge requests
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    # Prevent pipelines on default branch for release commits (changelog updates)
+    - if: $CI_COMMIT_MESSAGE =~ /^chore\(release\)/ && $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      when: never
+    # Run on tags
+    - if: $CI_COMMIT_TAG
+    # Run on default branch
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    # Allow forcing a run for example in child pipelines
+    - if: $FORCE_PIPELINE_RUN == "true"
+    # Do not run on other branches etc
+    - when: never
+
 build:
   image: docker:24
   services:
     - docker:24-dind
-  script:
+  before_script:
     - echo "$CI_REGISTRY_PASSWORD" | docker login $CI_REGISTRY -u $CI_REGISTRY_USER --password-stdin
+  script:
     - cd dnsmasq
     - docker buildx create --use
     - docker buildx inspect --bootstrap
-    - docker buildx build --platform linux/amd64,linux/arm64 --push -t $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_NAME .
+    - docker buildx build --platform linux/amd64,linux/arm64 --push -t $CI_REGISTRY_IMAGE:$CONTAINER_TAG .
+  rules:
+    # A project access token with api and write_repository permissions is required
+    - if: $CI_COMMIT_BRANCH =~ /feat\/.*/
+      variables:
+        CONTAINER_TAG: $CI_COMMIT_REF_NAME
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      variables:
+        CONTAINER_TAG: latest
+    - when: never
 
 release:
   image: docker.io/library/node:23.3.0-alpine3.19
@@ -41,3 +71,16 @@ release:
   rules:
     # A project access token with api and write_repository permissions is required
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH && $GITLAB_TOKEN && $ENABLE_RELEASE != "false"
+    - when: never
+
+publish:
+  image: docker:24
+  services:
+    - docker:24-dind
+  before_script:
+    - echo "$CI_REGISTRY_PASSWORD" | docker login $CI_REGISTRY -u $CI_REGISTRY_USER --password-stdin
+  script:
+    - docker buildx imagetools create --tag $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_NAME $CI_REGISTRY_IMAGE:latest
+  rules:
+    - if: $CI_COMMIT_TAG
+    - when: never

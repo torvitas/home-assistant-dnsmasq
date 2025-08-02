@@ -1,6 +1,5 @@
 // nextRelease.version is going to be templated by semantic release
 const updateImageTagRegEx = "s/^(version: \"?v)[^\"]+(\"?)$/\\1${nextRelease.version}\\2/g"
-
 export default {
   branches: [
     { name: process.env.CI_DEFAULT_BRANCH },
