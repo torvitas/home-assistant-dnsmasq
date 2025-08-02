@@ -4,6 +4,9 @@ slug: dnsmasq
 description: dnsmasq provides a container image for running DHCP, proxy DHCP, DNS, and/or TFTP with dnsmasq.
 url: https://gitlab.com/home-assistant-addons/home-assistant-dnsmasq
 init: false
+privileged:
+  - NET_ADMIN
+host_network: true
 arch:
   - aarch64
   - amd64
