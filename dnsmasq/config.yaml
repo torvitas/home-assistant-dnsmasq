@@ -11,13 +11,6 @@ arch:
   - aarch64
   - amd64
 image: registry.gitlab.com/home-assistant-addons/home-assistant-dnsmasq
-ports:
-  53/tcp: 53
-  53/udp: 53
-  67/tcp: 67
-  67/udp: 67
-  69/tcp: 69
-  69/udp: 69
 schema:
   arguments:
     - str
