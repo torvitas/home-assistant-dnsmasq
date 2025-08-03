@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.3](https://gitlab.com/home-assistant-addons/home-assistant-dnsmasq/compare/v1.1.2...v1.1.3) (2025-08-03)
+
+### Bug Fixes
+
+* Reenable host networking ([c8f0b12](https://gitlab.com/home-assistant-addons/home-assistant-dnsmasq/commit/c8f0b12325fc692f8df362fa60d1cbbf3aa08059))
+
 ## [1.1.2](https://gitlab.com/home-assistant-addons/home-assistant-dnsmasq/compare/v1.1.1...v1.1.2) (2025-08-03)
 
 ### Bug Fixes
