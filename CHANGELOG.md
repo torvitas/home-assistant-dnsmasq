@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.5](https://gitlab.com/home-assistant-addons/home-assistant-dnsmasq/compare/v1.1.4...v1.1.5) (2025-08-03)
+
+### Bug Fixes
+
+* Remove superfluous ports as we are on host network ([2fe5224](https://gitlab.com/home-assistant-addons/home-assistant-dnsmasq/commit/2fe52245a7c77cd7c5ba944db6a05b7a58627efe))
+
 ## [1.1.4](https://gitlab.com/home-assistant-addons/home-assistant-dnsmasq/compare/v1.1.3...v1.1.4) (2025-08-03)
 
 ### Bug Fixes
