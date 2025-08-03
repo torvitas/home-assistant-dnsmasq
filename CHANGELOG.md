@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.4](https://gitlab.com/home-assistant-addons/home-assistant-dnsmasq/compare/v1.1.3...v1.1.4) (2025-08-03)
+
+### Bug Fixes
+
+* Listen on additional ports on udp ([9b37b2c](https://gitlab.com/home-assistant-addons/home-assistant-dnsmasq/commit/9b37b2c50bf41cea30e9a755ea5c99946ecbe1dd))
+
 ## [1.1.3](https://gitlab.com/home-assistant-addons/home-assistant-dnsmasq/compare/v1.1.2...v1.1.3) (2025-08-03)
 
 ### Bug Fixes
