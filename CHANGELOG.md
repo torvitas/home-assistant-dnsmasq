@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.2](https://gitlab.com/home-assistant-addons/home-assistant-dnsmasq/compare/v1.1.1...v1.1.2) (2025-08-03)
+
+### Bug Fixes
+
+* Disable host networking ([a35bb87](https://gitlab.com/home-assistant-addons/home-assistant-dnsmasq/commit/a35bb874650972c31b6348808e01d9eeec016869))
+
 ## [1.1.1](https://gitlab.com/home-assistant-addons/home-assistant-dnsmasq/compare/v1.1.0...v1.1.1) (2025-08-03)
 
 ### Bug Fixes
