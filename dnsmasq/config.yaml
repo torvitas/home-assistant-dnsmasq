@@ -16,23 +16,15 @@ schema:
     - str
 options:
   arguments:
-    - --no-daemon
-    - --dhcp-range=192.168.1.1,proxy,255.255.255.0
+    - --dhcp-range=192.168.1.0,proxy
     - --enable-tftp
     - --tftp-root=/var/lib/tftpboot
-    # Legacy PXE
-    - --dhcp-match=set:bios,option:client-arch,0
-    - --dhcp-boot=tag:bios,undionly.kpxe
-    # UEFI
-    - --dhcp-match=set:efi32,option:client-arch,6
-    - --dhcp-boot=tag:efi32,ipxe.efi
-    - --dhcp-match=set:efibc,option:client-arch,7
-    - --dhcp-boot=tag:efibc,ipxe.efi
-    - --dhcp-match=set:efi64,option:client-arch,9
-    - --dhcp-boot=tag:efi64,ipxe.efi
-    # iPXE
-    - --dhcp-userclass=set:ipxe,iPXE
-    - --dhcp-boot=tag:ipxe,http://matchbox.example.com:8080/boot.ipxe
     - --log-queries
     - --log-dhcp
-    - --log-debug
+    # Legacy PXE
+    - --pxe-service=tag:!ipxe,X86PC,"PXE",undionly.kpxe,192.168.0.1
+    - --pxe-service=tag:!ipxe,X86-64_EFI,"PXE",ipxe.efi,192.168.0.1
+    - --pxe-service=tag:!ipxe,IA32_EFI,"PXE",ipxe.efi,192.168.0.1
+    # iPXE
+    - --dhcp-userclass=set:ipxe,iPXE
+    - --dhcp-boot=tag:ipxe,http://192.168.0.1:8080/boot.ipxe,,0.0.0.1
