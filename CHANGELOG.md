@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.6](https://gitlab.com/home-assistant-addons/home-assistant-dnsmasq/compare/v1.1.5...v1.1.6) (2025-09-16)
+
+### Bug Fixes
+
+* Change default configuration to a known working set of arguments ([358f60f](https://gitlab.com/home-assistant-addons/home-assistant-dnsmasq/commit/358f60f3b3bd63c4c70e5a12e71ab30bc24ba1b0))
+
 ## [1.1.5](https://gitlab.com/home-assistant-addons/home-assistant-dnsmasq/compare/v1.1.4...v1.1.5) (2025-08-03)
 
 ### Bug Fixes

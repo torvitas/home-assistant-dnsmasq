@@ -1,5 +1,5 @@
 name: dnsmasq
-version: v1.1.5
+version: v1.1.6
 slug: dnsmasq
 description: dnsmasq provides a container image for running DHCP, proxy DHCP, DNS, and/or TFTP with dnsmasq.
 url: https://gitlab.com/home-assistant-addons/home-assistant-dnsmasq
