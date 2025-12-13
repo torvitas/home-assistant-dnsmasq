@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.3.3](https://gitlab.com/home-assistant-addons/home-assistant-dnsmasq/compare/v1.3.2...v1.3.3) (2025-12-13)
+
+### Bug Fixes
+
+* Add X86 boot files ([b70be82](https://gitlab.com/home-assistant-addons/home-assistant-dnsmasq/commit/b70be820ce015e8a794ebb523cc6b11f921cefdd))
+
 ## [1.3.2](https://gitlab.com/home-assistant-addons/home-assistant-dnsmasq/compare/v1.3.1...v1.3.2) (2025-12-13)
 
 ### Bug Fixes
