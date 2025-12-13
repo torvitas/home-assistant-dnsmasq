@@ -12,6 +12,7 @@ arch:
   - amd64
 image: registry.gitlab.com/home-assistant-addons/home-assistant-dnsmasq
 schema:
+  config: str
   arguments:
     - str
 options:
