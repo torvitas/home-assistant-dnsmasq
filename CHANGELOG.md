@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.2.0](https://gitlab.com/home-assistant-addons/home-assistant-dnsmasq/compare/v1.1.6...v1.2.0) (2025-12-13)
+
+### Features
+
+* Enable RPi4 network boot ([015b1d7](https://gitlab.com/home-assistant-addons/home-assistant-dnsmasq/commit/015b1d76d28b0a8d1173349c566a964acb4ae796))
+
 ## [1.1.6](https://gitlab.com/home-assistant-addons/home-assistant-dnsmasq/compare/v1.1.5...v1.1.6) (2025-09-16)
 
 ### Bug Fixes
