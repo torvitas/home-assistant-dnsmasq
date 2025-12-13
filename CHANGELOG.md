@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.3.2](https://gitlab.com/home-assistant-addons/home-assistant-dnsmasq/compare/v1.3.1...v1.3.2) (2025-12-13)
+
+### Bug Fixes
+
+* Convert new lines to spaces ([1532c4a](https://gitlab.com/home-assistant-addons/home-assistant-dnsmasq/commit/1532c4adf11b9b2e65a4f14c60bf60b9a402dda1))
+
 ## [1.3.1](https://gitlab.com/home-assistant-addons/home-assistant-dnsmasq/compare/v1.3.0...v1.3.1) (2025-12-13)
 
 ### Bug Fixes
