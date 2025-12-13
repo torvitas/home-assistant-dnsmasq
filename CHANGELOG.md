@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.3.1](https://gitlab.com/home-assistant-addons/home-assistant-dnsmasq/compare/v1.3.0...v1.3.1) (2025-12-13)
+
+### Bug Fixes
+
+* Update schema ([c103f5c](https://gitlab.com/home-assistant-addons/home-assistant-dnsmasq/commit/c103f5cfdb7692f4c2f3451599246e4731912d29))
+
 ## [1.3.0](https://gitlab.com/home-assistant-addons/home-assistant-dnsmasq/compare/v1.2.0...v1.3.0) (2025-12-13)
 
 ### Features
