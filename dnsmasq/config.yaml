@@ -12,25 +12,13 @@ arch:
   - amd64
 image: registry.gitlab.com/home-assistant-addons/home-assistant-dnsmasq
 schema:
-  config: str
   arguments:
     - str
 options:
-  config: >
-    dhcp-range=192.168.1.0,proxy,255.255.255.0
-    enable-tftp
-    tftp-root=/var/lib/tftpboot
-    port=0
-    dhcp-userclass=set:ipxe,iPXE
-    pxe-service=tag:!ipxe,tag:rpi,0,"Raspberry Pi Boot"
-    dhcp-mac=set:rpi,d8:3a:dd:*:*:*
-    dhcp-boot=tag:rpi,tag:!ipxe,snp.efi
-    pxe-service=tag:!ipxe,X86PC,"PXE",undionly.kpxe
-    pxe-service=tag:!ipxe,X86-64_EFI,"PXE",ipxe.efi
-    pxe-service=tag:!ipxe,IA32_EFI,"PXE",ipxe.efi
   arguments:
     - --log-queries
     - --log-dhcp
+    - --dhcp-range=192.168.1.0,proxy,255.255.255.0
     ## iPXE Configuration
     # server address must be non zero, but can be anything as long as iPXE script is not fetched over TFTP
     # see: https://ipxe.org/appnote/proxydhcp
