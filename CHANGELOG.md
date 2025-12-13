@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.3.0](https://gitlab.com/home-assistant-addons/home-assistant-dnsmasq/compare/v1.2.0...v1.3.0) (2025-12-13)
+
+### Features
+
+* Add configuration option ([d15101f](https://gitlab.com/home-assistant-addons/home-assistant-dnsmasq/commit/d15101fb072f072cdd1e947d7090784afd6914bf))
+
 ## [1.2.0](https://gitlab.com/home-assistant-addons/home-assistant-dnsmasq/compare/v1.1.6...v1.2.0) (2025-12-13)
 
 ### Features
