@@ -26,15 +26,11 @@ ipxe:
     - echo "$CI_REGISTRY_PASSWORD" | docker login $CI_REGISTRY -u $CI_REGISTRY_USER --password-stdin
   script:
     - cd dnsmasq/ipxe
-    - docker build --push -t $CI_REGISTRY_IMAGE:ipxe-$CONTAINER_TAG .
+    - docker build --push -t $CI_REGISTRY_IMAGE:ipxe-$CI_COMMIT_REF_NAME .
   rules:
     # A project access token with api and write_repository permissions is required
     - if: $CI_COMMIT_BRANCH =~ /feat\/.*/
-      variables:
-        CONTAINER_TAG: $CI_COMMIT_REF_NAME
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
-      variables:
-        CONTAINER_TAG: latest
     - when: never
 
 build:
@@ -48,15 +44,11 @@ build:
     - cd dnsmasq
     - docker buildx create --use
     - docker buildx inspect --bootstrap
-    - docker buildx build --platform linux/amd64,linux/arm64 --build-arg IPXE_IMAGE=$CI_REGISTRY_IMAGE:ipxe-$CONTAINER_TAG --push -t $CI_REGISTRY_IMAGE:$CONTAINER_TAG .
+    - docker buildx build --platform linux/amd64,linux/arm64 --build-arg IPXE_IMAGE=$CI_REGISTRY_IMAGE:ipxe-$CI_COMMIT_REF_NAME --push -t $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_NAME .
   rules:
     # A project access token with api and write_repository permissions is required
     - if: $CI_COMMIT_BRANCH =~ /feat\/.*/
-      variables:
-        CONTAINER_TAG: $CI_COMMIT_REF_NAME
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
-      variables:
-        CONTAINER_TAG: latest
     - when: never
 
 release:
