@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.4.4](https://gitlab.com/home-assistant-addons/home-assistant-dnsmasq/compare/v1.4.3...v1.4.4) (2025-12-14)
+
+### Bug Fixes
+
+* Update build configuration ([b02ce95](https://gitlab.com/home-assistant-addons/home-assistant-dnsmasq/commit/b02ce95dc99214068297bb686b210b2399379ce6))
+
 ## [1.4.3](https://gitlab.com/home-assistant-addons/home-assistant-dnsmasq/compare/v1.4.2...v1.4.3) (2025-12-14)
 
 ### Bug Fixes
