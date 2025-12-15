@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.4.5](https://gitlab.com/home-assistant-addons/home-assistant-dnsmasq/compare/v1.4.4...v1.4.5) (2025-12-15)
+
+### Bug Fixes
+
+* Remove automatic detection of rpi ([c1e3815](https://gitlab.com/home-assistant-addons/home-assistant-dnsmasq/commit/c1e3815c6c8405d8ace17f04e0934905c466bf71))
+
 ## [1.4.4](https://gitlab.com/home-assistant-addons/home-assistant-dnsmasq/compare/v1.4.3...v1.4.4) (2025-12-14)
 
 ### Bug Fixes
