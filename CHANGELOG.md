@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.5.0](https://gitlab.com/home-assistant-addons/home-assistant-dnsmasq/compare/v1.4.5...v1.5.0) (2025-12-15)
+
+### Features
+
+* Add tag filter for pxe boot ([5a6eb9f](https://gitlab.com/home-assistant-addons/home-assistant-dnsmasq/commit/5a6eb9f9d76618eee7109c8bd06731cfb16f4bf3))
+
 ## [1.4.5](https://gitlab.com/home-assistant-addons/home-assistant-dnsmasq/compare/v1.4.4...v1.4.5) (2025-12-15)
 
 ### Bug Fixes
